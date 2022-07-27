@@ -29,3 +29,5 @@ logics
 
 app.component.ts
 
+# httpresponse-->html
+# restapi-->json
