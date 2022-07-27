@@ -32,9 +32,10 @@ app.component.ts
 # httpresponse-->html
 # restapi-->json response
 
-Postman
+# Postman
 -------
 get-->read
 post-->create
 put,patch-->update
 delete
+
