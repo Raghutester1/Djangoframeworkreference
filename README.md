@@ -1,2 +1,2 @@
 # Djangoframeworkreference
-reference links
+reference
