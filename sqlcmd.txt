@@ -1,0 +1,31 @@
+sqlcmd.exe -S ServerName\InstanceName -E -Q "SELECT @@VERSION"
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.Microsoft SQL Server',
+        'NAME': 'BicsGlobal',
+        'USER': 'sa',
+        'PASSWORD': 'Thylak@123',
+        'HOST': '127.0.0.1',
+        'PORT': '',
+    }
+}
+
+
+from mssql import *
+
+pip install django-mssql==1.1
+
+pip install django-pyodbc-azure
+
+'ENGINE': 'sql_server.pyodbc'
+
+its@bicsglobal.com
+
+
+app.component.html
+
+logics
+
+app.component.ts
+

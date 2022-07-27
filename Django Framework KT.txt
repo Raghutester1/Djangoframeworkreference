@@ -1,0 +1,163 @@
+Django Framework KT:  python manage.py migrate --run-syncdb
+-------------------
+
+https://www.django-rest-framework.org/#example
+manage.py:--> hosting to server
+------------
+manage.py is the master ofthe project.
+
+to run project--> python manage.py operations what u want to run  <-------you need to navigate inside the my_project_name folder and then launch
+
+------->python manage.py runserver
+
+
+settings:
+--------
+
+to define the app configurations, what we need to add--- define inside of the installesd app
+
+urls.py(project):
+-----------------
+
+to config the urls
+
+models:
+-------
+
+API Apps
+
+
+serializer:
+-----------
+
+we need to create 
+uses
+
+compare the frontend data with db with t&c applicable.
+
+views:
+------
+business logic of the project
+what we need to show / doesn't show to user end
+
+url(app):
+----------
+used to link function----> (that  present in views.py) and url name
+
+admin.py:
+----------
+
+data populates only-->
+
+migration:(language conversion)
+-----------
+used to convert python language to sql language.
+
+
+
+Rest api:
+---------
+
+to access functionality of one application.
+
+models:
+-------
+ A model is a class that represents table or collection in our DB, and where every attribute of the class is a field of the table or collection. 
+Models are defined in the app/models.py (in our example: myapp/models.py)
+
+Model.py is one of the most import concept of django framework. 
+
+It allows us to completely define the database of our web applications allowing us to : Declare tables and fields of our database. 
+
+Define all meta-data of our Database. Decide the behaviour of each field.
+
+
+apps:
+-----
+
+
+tests:
+------
+
+
+What are migrations in Django:
+-------------------------------
+Migrations are Django's way of propagating changes you make to your models (adding a field, deleting a model, etc.) into your database schema. 
+
+They're designed to be mostly automatic, but you'll need to know when to make migrations, when to run them, and the common problems you might run into.
+
+
+views:
+------
+
+Django views are Python functions that takes http requests and returns http response, like HTML documents. 
+
+A web page that uses Django is full of views with different tasks and missions. 
+
+Views are usually put in a file called views.py located on your app's folder.
+
+admin.py:
+---------
+
+The admin.py file is used to display your models in the Django admin panel. You can also customize your admin panel.
+
+settings:
+---------
+
+settings.py is a core file in Django projects. 
+
+It holds all the configuration values that your web app needs to work; 
+
+database settings, logging configuration, where to find static files, API keys if you work with external APIs, and a bunch of other stuff.
+
+
+manage:
+-------
+
+
+
+urls:
+-----
+
+WSGI:
+----
+
+Django's primary deployment platform is WSGI, the Python standard for web servers and applications. 
+
+Django's startproject management command sets up a minimal default WSGI configuration for you, 
+
+which you can tweak as needed for your project, and direct any WSGI-compliant application server to use.
+
+
+serializer:
+-----------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

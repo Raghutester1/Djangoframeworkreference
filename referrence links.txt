@@ -1,0 +1,3 @@
+https://dev.to/koladev/apiview-vs-viewsets-4ln0
+
+https://micropyramid.com/blog/generic-functional-based-and-class-based-views-in-django-rest-framework/#:~:text=DRF%20provides%20three%20generic%20viewsets%20GenericViewSet%2C%20ReadOnlyModelViewSet%2C%20ModelViewSet.

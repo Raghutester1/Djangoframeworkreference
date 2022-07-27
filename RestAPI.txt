@@ -1,0 +1,7 @@
+REST API
+--------
+GET--->READ
+POST-->CREATE
+PUT---->UPDATE
+PATCH--->
+DELETE--->DELETE

@@ -1,0 +1,121 @@
+Description for Normalization:
+------------------------------
+
+Normalization is the process to eliminate the data repetition in the database.
+
+
+
+attribute name : column name
+attribute values: data stored in the each column.
+
+non-prime attribute: an attribute it doesn't comes under to primary key is known as non-prime attribute.
+
+types of normalization:
+----------------------
+1nf
+2nf
+3nf
+bcnf (boyce codd)
+
+1NF(FIRST NORMAL FORM):
+----------------------
+Criteria : 
+1.column should have a single valued attribute.
+2.each column should have an unique name.
+3.values are stored in column have same domain value.
+4.order of sorting isn't an issue.
+
+
+2NF(SECOND NORMAL FORM):
+-----------------------
+Criteria : no partial dependency.
+i.e., no non-prime attribute (attributes which are not part of any candidate key) is dependent on any proper subset of any candidate key of the table.
+
+Criteria :
+---------
+1.should have to follow 1nf.
+2.should not be any partial dependency.
+
+examples:
+---------
+                 |--------|------>>>>>>>>>>>>>>>>>>both student_id and sub_id are primary key.
+score_id   student_id  sub_id   marks   teacher
+-----------------------------------------------
+  1          11         01       75     mr.steve
+  2          23         03       78     mr.tamil
+  3          16         05       81     mr.suman 
+  4          16         03       61     mr.tamil
+  5          27         01       78     mr.steve
+
+KEY:
+----
+---->teacher is partial dependence on sub_id. so we need to create separate table for teacher.
+---->marks is fully dependence on primary key(student_id & sub_id).
+ 
+
+3NF(THIRD NORMAL FORM):
+-----------------------
+
+Criteria :
+----------
+1.should have to follow 2nf.
+2.should not contain any transitive dependency.
+
+transitive dependency:
+---------------------
+indirectly an attribute dependence on primary key.
+
+
+examples:
+---------
+emp_id  emp_name  emp_zipcode   emp_state   emp_city
+-----------------------------------------------------
+215     tamil      456231        up          noida
+216     raghu      623516        tn          chennai
+316     arun       623658        tn          chennai
+278     suman      269874        dl          agra
+286     bharath    546987        ka          bangalore
+
+
+keys:
+----
+------>emp_id is a primary key.
+------>emp_zipcode is dependence on primary key(emp_id).
+------>emp_city is dependence emp_zipcode.
+------>emp_city is indirecrly dependence on primary key(emp_id).
+
+BCNF(BOYCE CODD NORMAL FORM):
+-----------------------------
+
+Criteria :
+----------
+1.that should have to follow 3nf.
+2.should not be in the reverse dependency.
+
+primary key:
+------------
+an attribute identify the record uniquely, is referred as primary key.
+
+reverse dependency:
+-------------------
+part of the primary key that depends on the non prime attribute.
+
+
+example:
+--------
+stu_id     sub      prof
+-------------------------
+11        java      mr.steve
+12        c#        mr.haugh
+16        python    mr.mitchel
+18        c++       mr.john	
+
+keys:
+-----
+------> as per the above table, part of the primary key depends on the non-prime attribute.
+------->(primary key)subject it depends on (non-prime attribute)professor. 
+
+
+
+
+

@@ -1,0 +1,41 @@
+ACID in dbms:
+------------
+
+A -Atomicity
+C -Consistency
+I -Isolation
+D -Durability
+
+Atomicity:
+---------
+either all or none.
+
+rollback.
+
+example: atm withdrawl/internet bank.
+
+Consistenacy:
+-------------
+before transaction
+ 
+after transaction
+
+sum of the value should be same between before and after.
+
+Isolation:
+----------
+ it follows Schedule.
+
+Schedule:
+ it is chrornological execution sequence of multiple transaction.
+
+serial : (queue)
+
+ examples:atm queue.
+
+parallel: 
+ examples: irctc website.
+
+Durability:
+----------
+what are the changes that you have done should be permanent.

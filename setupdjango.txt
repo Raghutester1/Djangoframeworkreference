@@ -1,0 +1,17 @@
+how to create the new folder and setup nenv for django framework:
+-----------------------------------------------------------------
+
+mkdir jangofirst  
+
+cd jangofirst
+
+django-admin startproject firstproject 
+
+C:\Users\raghuram\jangofirst>cd firstproject
+
+C:\Users\raghuram\jangofirst\firstproject>django-admin startapp jangoapp1
+
+C:\Users\raghuram\jangofirst\firstproject>cd..
+
+
+

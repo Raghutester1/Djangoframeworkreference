@@ -1,0 +1,6 @@
+https://www.javatpoint.com/dbms-architecture
+
+https://www.youtube.com/watch?v=k5E2AVpwsko
+
+https://www.simplilearn.com/tutorials/sql-tutorial/what-is-normalization-in-sql#:~:text=Normalization%20is%20the%20process%20to,data%20from%20the%20relational%20tables.
+

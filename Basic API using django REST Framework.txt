@@ -1,0 +1,179 @@
+Basic API using django REST Framework:
+--------------------------------------
+refernce links: https://www.youtube.com/watch?v=5ud9Y2uB4PY
+
+-m pip install --upgrade pip' command.
+error:
+------
+raise ImportError(
+ImportError: Couldn't import Django. Are you sure it's installed and available on your PYTHONPATH environment variable? Did you forget to activate a virtual environment?
+
+https://stackoverflow.com/questions/64124931/how-to-fix-locking-failed-in-pipenv
+
+https://stackoverflow.com/questions/46210934/importerror-couldnt-import-django
+
+https://stackoverflow.com/questions/33308781/django-rest-framework-no-module-named-rest-framework
+
+https://stackoverflow.com/questions/70319606/importerror-cannot-import-name-url-from-django-conf-urls-after-upgrading-to
+
+https://stackoverflow.com/questions/60745136/django-importerror-cannot-import-name-views
+
+https://stackoverflow.com/questions/63092776/importerror-cannot-import-name-views-from-learning-log
+
+https://groups.google.com/g/django-rest-framework/c/xZFzywpuOsc---> vies.viewset
+
+https://stackoverflow.com/questions/38041060/django-rest-framework-no-module-named-serializers
+
+https://pythonexamples.org/python-tkinter-login-form/---> loginfunction
+
+https://www.geeksforgeeks.org/check-if-email-address-valid-or-not-in-python/
+
+https://stackoverflow.com/questions/62361368/how-to-do-password-and-confirm-password-validation-in-django-forms
+
+https://github.com/SaadAhmedSalim/RegistrationFormUsingPython/blob/master/RegistrationFormWithDatabaseUsingPython/register.py-->github for registration form
+
+
+
+
+flow:
+-----
+under application:
+------------------
+
+models.py-->define the fun (business logic)/ storing data in db
+serializer.py-->to validate the data in models.py with views.py
+views.py-->handle request/response cycle of an web application.
+urls.py-->
+
+under project:
+--------------
+settings.py-->this file contains all project config(installed apps,db,middleware)
+urls.py-->this file responsible for mapping urls to page in our project.
+manage.py-->it is used to run management cmd related to our project to run server(create migration & runserver).
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+converting models data into json/xml--->Serialization.
+
+to view data, we need to ctreate url for mapping the viewset.
+
+
+
+# Application definition
+
+INSTALLED_APPS = [
+	'django.contrib.admin',
+	'django.contrib.auth',
+	'django.contrib.contenttypes',
+	'django.contrib.sessions',
+	'django.contrib.messages',
+	'django.contrib.staticfiles',
+	'rest_framework',
+	'apis',
+]
+
+from django.contrib import admin
+# include necessary libraries
+from django.urls import path, include
+
+urlpatterns = [
+	path('admin/', admin.site.urls),
+	# add apis urls
+	path('', include("apis.urls"))
+]
+
+from django.db import models
+
+class GeeksModel(models.Model):
+	title = models.CharField(max_length = 200)
+	description = models.TextField()
+
+	def __str__(self):
+		return self.title
+
+# import serializer from rest_framework
+from rest_framework import serializers
+
+# import model from models.py
+from .models import GeeksModel
+
+# Create a model serializer
+class GeeksSerializer(serializers.HyperlinkedModelSerializer):
+	# specify model and fields
+	class Meta:
+		model = GeeksModel
+		fields = ('title', 'description')
+
+# import viewsets
+from rest_framework import viewsets
+
+# import local data
+from .serializers import GeeksSerializer
+from .models import GeeksModel
+
+# create a viewset
+class GeeksViewSet(viewsets.ModelViewSet):
+	# define queryset
+	queryset = GeeksModel.objects.all()
+	
+	# specify serializer to be used
+	serializer_class = GeeksSerializer
+
+# basic URL Configurations
+from django.urls import include, path
+# import routers
+from rest_framework import routers
+
+# import everything from views
+from .views import *
+
+# define the router
+router = routers.DefaultRouter()
+
+# define the router path and viewset to be used
+router.register(r'geeks', GeeksViewSet)
+
+# specify URL Path for rest_framework
+urlpatterns = [
+	path('', include(router.urls)),
+	path('api-auth/', include('rest_framework.urls'))
+]
+
+
+##########################################################
+Solution 1
+
+     import landing.views
+
+     ​urlpatterns​ ​=​ [
+     path​(​''​, ​landing​.​views​.​Index.as_view()​, ​name​=​'index'​),
+    ] 
+Solution 2
+
+from landing.views import Index
+
+​urlpatterns​ ​=​ [
+path('index/', views.Index.as_view(),name='index'),
+]
+Solution 3: Inside landing app create urls.py an add
+
+from views import Index
+
+​urlpatterns​ ​=​ [
+path('index/', views.Index.as_view(),name='index')
+] 
+and in project/urls.py add
+
+​
+
+from​ ​django​.​urls​ ​import​ ​include​, ​path
+
+    ​urlpatterns​ ​=​ [
+    path('landing/', include('landing.urls') ),
+    ]
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+virtualenv --version

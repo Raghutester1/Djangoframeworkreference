@@ -1,0 +1,53 @@
+22.07.2022
+-----------
+
+https://www.top-password.com/blog/open-odbc-data-source-administrator-in-windows-10/
+
+https://www.firehousesoftware.com/webhelp/FHCADMonitor/Content/InstallationGuide/03_Create64-bitODBCDataSource.htm
+
+https://profil-software.com/blog/development/10-things-you-need-know-effectively-use-django-rest-framework/
+
+https://docs.python.org/3/library/venv.html#
+
+
+https://www.apiscene.io/lifecycle/7-layers-of-api-architecture-maturity/
+
+refernce links: https://www.youtube.com/watch?v=5ud9Y2uB4PY
+
+https://www.javatpoint.com/dbms-architecture
+
+https://www.youtube.com/watch?v=k5E2AVpwsko
+
+https://www.simplilearn.com/tutorials/sql-tutorial/what-is-normalization-in-sql#:~:text=Normalization%20is%20the%20process%20to,data%20from%20the%20relational%20tables.
+
+-m pip install --upgrade pip' command.
+error:
+------
+raise ImportError(
+ImportError: Couldn't import Django. Are you sure it's installed and available on your PYTHONPATH environment variable? Did you forget to activate a virtual environment?
+
+https://stackoverflow.com/questions/64124931/how-to-fix-locking-failed-in-pipenv
+
+https://stackoverflow.com/questions/46210934/importerror-couldnt-import-django
+
+https://stackoverflow.com/questions/33308781/django-rest-framework-no-module-named-rest-framework
+
+https://stackoverflow.com/questions/70319606/importerror-cannot-import-name-url-from-django-conf-urls-after-upgrading-to
+
+https://stackoverflow.com/questions/60745136/django-importerror-cannot-import-name-views
+
+https://stackoverflow.com/questions/63092776/importerror-cannot-import-name-views-from-learning-log
+
+https://groups.google.com/g/django-rest-framework/c/xZFzywpuOsc---> vies.viewset
+
+https://stackoverflow.com/questions/38041060/django-rest-framework-no-module-named-serializers
+
+https://pythonexamples.org/python-tkinter-login-form/---> loginfunction
+
+https://www.geeksforgeeks.org/check-if-email-address-valid-or-not-in-python/
+
+https://stackoverflow.com/questions/62361368/how-to-do-password-and-confirm-password-validation-in-django-forms
+
+https://github.com/SaadAhmedSalim/RegistrationFormUsingPython/blob/master/RegistrationFormWithDatabaseUsingPython/register.py-->github for registration form
+
+https://stackoverflow.com/questions/31089221/what-is-the-difference-between-put-post-and-patch#:~:text=Here%20is%20a%20simple%20description,always%20for%20updating%20a%20resource
